@@ -1,0 +1,21 @@
+# Normalize every text file to LF, in the repo AND in the working copy
+* text=auto eol=lf
+
+# Windows-only scripts must keep CRLF
+*.cmd text eol=crlf
+*.bat text eol=crlf
+*.ps1 text eol=crlf
+
+# Unix scripts must always be LF (they break with CRLF in Linux/Docker)
+*.sh text eol=lf
+mvnw text eol=lf
+
+# Binary files: never modify
+*.png   binary
+*.jpg   binary
+*.jpeg  binary
+*.gif   binary
+*.ico   binary
+*.jar   binary
+*.woff  binary
+*.woff2 binary
